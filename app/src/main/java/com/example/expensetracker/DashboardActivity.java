@@ -31,4 +31,7 @@ public class DashboardActivity extends AppCompatActivity {
         startActivity(new Intent(this, LoginActivity.class));
         finish();
     }
+    public void goToListView(View view) {
+        startActivity(new Intent(this, ListViewActivity.class));
+    }
 }
