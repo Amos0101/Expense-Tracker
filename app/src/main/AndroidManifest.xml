@@ -16,8 +16,11 @@
             android:name=".EditExpense"
             android:exported="false" />
         <activity
+
             android:name=".AddExpenseActivity"
             android:exported="false" />
+        <activity android:name=".ListViewActivity"/>
+
         <activity
             android:name=".DashboardActivity"
             android:exported="false" />
