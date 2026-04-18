@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -77,4 +78,6 @@ public class LoginActivity extends AppCompatActivity {
     public void goToRegister(View view){
         startActivity(new Intent(this,RegisterActivity.class));
     }
+
+    public void goToOtp(View view){startActivity(new Intent(this, OtpActivity.class));}
 }

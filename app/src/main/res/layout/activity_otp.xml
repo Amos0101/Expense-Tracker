@@ -2,13 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="24dp"
@@ -28,62 +27,49 @@
             android:background="@drawable/rounded_image"
             android:clipToOutline="true"
             android:layout_marginBottom="12dp"/>
-        <!-- Title -->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Register"
+            android:text="OTP Login"
+            android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:textAlignment="center"/>
 
         <EditText
+            android:id="@+id/etPhone"
+            android:hint="Enter Phone (+254...)"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/etEmail"
-            android:hint="Email"
-            android:textColor="@color/black"
-            android:background="@drawable/input_bg"
-            android:layout_marginBottom="15dp"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/etPassword"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:textColor="@color/black"
-            android:background="@drawable/input_bg"
-            android:layout_marginBottom="15dp"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/etConfirmPassword"
-            android:hint="Confirm Password"
-            android:inputType="textPassword"
-            android:textColor="@color/black"
-            android:background="@drawable/input_bg"
-            android:layout_marginBottom="20dp"/>
+            android:layout_height="wrap_content"/>
 
         <Button
+            android:text="Send OTP"
+            android:onClick="sendOTP"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Register"
-            android:onClick="registerUser"
-            android:layout_marginBottom="15dp"/>
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etCode"
+            android:hint="Enter OTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="Verify"
+            android:onClick="verifyCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Already have an account? Login"
+            android:text="Login with Email? Click here"
             android:textColor="#1E88E5"
+            android:layout_marginTop="5dp"
             android:onClick="goToLogin"/>
 
     </LinearLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
